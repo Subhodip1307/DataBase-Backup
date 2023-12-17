@@ -20,9 +20,9 @@
 ```bash
 dbname="/path/to/your/db.sqlite3"
 ```
-In the Line 6 of the code file you will see a varibale call 'dbname' just give your database location
+`In the Line 6 of the code file you will see a varibale call 'dbname' just give your database location
 
-** If you are a beginner then loging in your server as root or run this scpit as root 
+`** If you are a beginner then loging in your server as root or run this scpit as root 
 
 - Now You Need to write down your table names of your data base you wanna  get backup or you can keep it empty if you wanna full backup
 
@@ -60,6 +60,6 @@ To check it just run the scipt in your vps server like this
 ```bash
 python3 backupdbSQLite.py
 ```
-
+ ** If you dont get any error while running script then you are ready to go to the next step to schedule it and if you get any error you can knock me in issues section
    
     
