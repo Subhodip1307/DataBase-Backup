@@ -24,7 +24,7 @@ In the Line 6 of the code file you will see a varibale call 'dbname' just give y
 
 ** If you are a beginner then loging in your server as root or run this scpit as root 
 
-- Now You Need to write down your table names of your data base you wanna  get backup
+- Now You Need to write down your table names of your data base you wanna  get backup or you can keep it empty if you wanna full backup
 
   ** In this scrript You can backup singel or multiple tables very easily
 
@@ -33,11 +33,33 @@ In the Line 6 of the code file you will see a varibale call 'dbname' just give y
    ```
 
    ** In line number 7 of the script add your table name in that 'tablenames' python list one by one
+- Now You need specify your backup zip file name (code line number 13)
+
+```bash
+  ZipName="Backup{}".format(date.today())
+```
+** Give any name as you like or you can simpliy change the word 'Backup' with anyother word you want
 
   - Now we need to create a Telegram bot ( you can use [BOTFAHER](https://t.me/BotFather) and collect your BOT API Token
 
       ** I hope You Can create A Bot very easily if not you can watch any youtube tutorial for that
 
 - Next We Need A Chat id to send message to that id ( You Can Use [RAWBOT](https://t.me/raw_data_bot) and collect your chat id )
+- After Geting Chat-id and BOT API key fill the data in python file
+
+```bash
+
+  TELEGRAM_BOT_API_KEY="" # Telegram BOT API KEY
+  TELEGRAM_CHAT_ID="" # Telegram Chat I
+
+```
+
+After That now we are ready to check the script and then we schedule the task for us
+To check it just run the scipt in your vps server like this
+
+```bash
+python3 backupdbSQLite.py
+```
+
    
     
