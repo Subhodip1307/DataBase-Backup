@@ -19,4 +19,6 @@ This script currently supports the following database systems:
 
 <h1>Getting Started</h1>
 
+  ** Before Getting Start User Should have python3 in there system 
+
 - [SQLITE](sqlite_backup/DBSQLITE.md)
