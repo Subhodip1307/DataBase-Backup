@@ -62,4 +62,4 @@ python3 backupdbSQLite.py
 ```
  ** If you dont get any error while running script then you are ready to go to the next step to schedule it and if you get any error you can knock me in issues section
    
-<h1>Now Let's [schedule](../schedule) the Script for Daily Backup</h1>
+**Now Let's [schedule](../schedule) the Script for Daily Backup
