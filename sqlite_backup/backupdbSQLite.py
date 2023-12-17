@@ -10,7 +10,7 @@ import io
 
 dbname="db.sqlite3"
 tablenames=[]
-ZipName="JGH_SalesBackup{}".format(date.today())
+ZipName="Backup{}".format(date.today())
 TELEGRAM_BOT_API_KEY="" # Telegram BOT API KEY
 TELEGRAM_CHAT_ID="" # Telegram Chat ID
 
@@ -33,6 +33,7 @@ for tablename in tablenames:
         csv_writer.writerow(i)
     csv_file.seek(0)
     zipile.writestr(f"{tablename}.csv",csv_file.read())
+    csv_file.close()
 connection.commit()
 connection.close()
 zipile.close()
