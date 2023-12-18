@@ -3,7 +3,7 @@
 
 This Python script provides a convenient and fun way to back up your database data using a Telegram bot. Instead of relying on traditional backup methods, this script leverages the simplicity and accessibility of Telegram to deliver your database backups directly to you.
 
-<h1>Features<h1>
+<h1>Features</h1>
 <b>Telegram Integration:</b> Receive your database backups seamlessly through Telegram, making it easy to stay informed about the status of your backups.
 
 <b>Scheduled Backups:</b> Set up scheduled backups to ensure regular updates of your database data without manual intervention.
