@@ -15,7 +15,7 @@ This Python script provides a convenient and fun way to back up your database da
 This script currently supports the following database systems:
 
 - **SQLite**: A lightweight, file-based database system. Perfect for small to medium-sized applications.
-- **MYSQL/<MYSQL-SERVER**: MySQL is a relational database management system (RDBMS) that uses Structured Query Language (SQL) to store, manage, and retrieve data
+- **MYSQL/MYSQL-SERVER**: MySQL is a relational database management system (RDBMS) that uses Structured Query Language (SQL) to store, manage, and retrieve data
 - Comming more soon.....
 
 <h1>Getting Started</h1>
