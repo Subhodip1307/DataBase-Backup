@@ -20,7 +20,7 @@ This script currently supports the following database systems:
 
 <h1>Getting Started</h1>
 
-  ** Before Getting Start User Should have python3 in there system 
+  ** Before Getting Start User Should have python3 installed in Your system 
 
 - [SQLITE](sqlite_backup/DBSQLITE.md)
 - [MYSQL/MYSQL-SERVER](mysql_backup/MYSQL.md)
