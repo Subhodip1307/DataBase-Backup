@@ -1,5 +1,5 @@
 # Data-Base-Back-up (SQLITE Guide)
-
+ **As we will work with SQLITE so i will you to suggest you to move only the 'sqlite_backup' folder or the python script to your VPS server
 <h1>Getting Started</h1>
 
 - Open 'sqlite_backup' folder
