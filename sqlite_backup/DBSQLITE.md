@@ -1,5 +1,5 @@
 # Data-Base-Back-up (SQLITE Guide)
- **As we will work with SQLITE so i will you to suggest you to move only the 'sqlite_backup' folder or the python script to your VPS server
+ **As we will work with SQLITE so I will you to suggest you to move only the 'sqlite_backup' folder or the python script to your VPS server
 <h1>Getting Started</h1>
 
 - Open 'sqlite_backup' folder
@@ -15,12 +15,12 @@
    ```bash
    nano backupdbSQLite.py
    ```
-- In This Step You will have to provide your Database path
+- In This Step You will have to provide your Database path (code line number 10)
 
 ```bash
 dbname="/path/to/your/db.sqlite3"
 ```
-`In the Line 6 of the code file you will see a varibale call 'dbname' just give your database location
+`In the Line 10 of the code file you will see a varibale call 'dbname' just give your database location
 
 `** If you are a beginner then loging in your server as root or run this scpit as root 
 
@@ -32,8 +32,8 @@ dbname="/path/to/your/db.sqlite3"
    tablenames=["tabales_name1","table_name2"]
    ```
 
-   ** In line number 7 of the script add your table name in that 'tablenames' python list one by one
-- Now You need specify your backup zip file name (code line number 13)
+   ** In line number 12 of the script add your table name in that 'tablenames' python list one by one
+- Now You need specify your backup zip file name (code line number 18)
 
 ```bash
   ZipName="Backup{}".format(date.today())
