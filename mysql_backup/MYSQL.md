@@ -4,7 +4,7 @@
 <h1>Getting Started</h1>
 
 - Open 'mysql_backup' folder (not required you just copied the python file)
-- 
+
 - Download Python Dependencies with the help of requirements.txt file.
 
   ```bash

@@ -13,8 +13,8 @@ connection = mysql.connector.connect(
   password="Qrjgh@dm1n",
   database="qrcodejgh"
 )
-dbname="db.sqlite3"
-tablenames=[]
+
+tablenames=[] # Type table Names
 ZipName=f"backup_{date.today()}"
 TELEGRAM_BOT_API_KEY="" # Telegram BOT API KEY
 TELEGRAM_CHAT_ID="" # Telegram Chat ID # Kepp empty if you want full db backup
