@@ -1,5 +1,5 @@
 # Data-Base-Back-up (MySql Guide)
- **before start I am considering that mysql in installed and running in your system.
+ **before start I am considering that mysql in installed and running in your system and you should Installed Python3 in your system.
  
  ** As we will work with mysql database so then move the 'mysql_backup' folder or just the 'backupMysql.py' to your server of vps
 
@@ -68,7 +68,8 @@ Now Let's understand What to Do with it with few step
      
 - Now Add The Host Name (By default mysql runs on localhost if your mysql is running on another host (ip) then provide the host address)
 - Now add The User Name (It's suggested to create a user who have read privilege on your database or you can use root user but it's not suggested). Be sure That User details have privilege on that data base
-- Now add the User Password and Database Name and the Port( If you are not useing dcoker to run mysql then the default port for your mysql will be 3306) 
+- Now add the User Password and Database Name and the Port( If you are not useing dcoker to run mysql then the default port for your mysql will be 3306)
+  
 ** Sorry to say that if you  wanna whole database backup of a mysql-server for that if have to write down the whole details for each database this limitaion will fix soon 
 
 # Setup TelegramBot
@@ -89,7 +90,6 @@ TELEGRAM_BOT_API_KEY="" # Telegram BOT API KEY
 TELEGRAM_CHAT_ID=0000 # Telegram Chat ID # telegram chat id will be a integer so dont use singel or double quotes
 
 ```
-
 After That now we are ready to check the script and then we schedule the task for us
 To check it just run the scipt in your vps server like this ( I hop you didn't deactivated your virtualenv)
 
@@ -98,9 +98,7 @@ python3 BackupDatabase.py
 ```
  ** If you dont get any error while running script then you are ready to go to the next step to schedule it and if you get any error you can knock me in issues section
 - Now Deactivate The Virtualenv and Move to the next part with this following command
-
-  ```bash
- deactivate
-  ```
-   
+ ```bash
+  deactivate
+```
 **Now Let's [schedule](../schedule.md) the Script for Daily Backup
