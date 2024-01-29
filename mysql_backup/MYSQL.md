@@ -45,59 +45,62 @@ example: source/backupenv/bin/acticate
   ```
 - Next open the code python code file in any text editor.
 
-  ***In my case I will use nano editor and as I have opned 'sqlite_backup' folder so my python file name will be 'backupdbSQLite'
+  ***In my case I will use nano editor and as I have opned 'mysql_backup' folder so my python file name will be 'BackupDatabase.py'
 
    ```bash
-   nano backupMysql.py
+   nano BackupDatabase.py
    ```
-- In This Step You will have to provide your Database details
-
-```bash
-connection = mysql.connector.connect(
-  host="localhost",
-  user="subhodip",
-  password="subho@12",
-  database="mydatabase"
-)
-```
-So Here I am giving my user name of my data base and password and the table I want Backup (Be sure That The data base User details You are Providing have privilege on that data base)
-
-- Now You Need to write down your table names of your data base you wanna  get backup or you can keep it empty if you wanna full backup
-
-  ** In this scrript You can backup singel or multiple tables very easily
-
-   ```bash
-   tablenames=["tabales_name1","table_name2"]
-   ``
-   ** In line number 17 of the script add your table name in that 'tablenames' python list one by one
    
-- Now You need specify your backup zip file name (code line number 18)
+- In This Step You will have to provide your Database details, Here is a Example That how you should mention your Database Details
 
 ```bash
-  ZipName="Backup{}".format(date.today())
+Database_list={
+    "EXAMPLE_NAME1":{"HOST":"localhost","USER":"subho","PASSWORD":"subho1234","DATABASE":"github","PORT":3306},
+    "EXMAPLE_NAME2":{"HOST":"localhost","USER":"root","PASSWORD":"root1234","DATABASE":"gitlab","PORT":3307}
+}
 ```
-** Give any name as you like or you can simpliy change the word 'Backup' with anyother word you want
+Now Let's understand What to Do with it with few step
 
-  - Now we need to create a Telegram bot ( you can use [BOTFAHER](https://t.me/BotFather) and collect your BOT API Token
+- At The begining I am giving the name of zipfiles in which I want to get backup of the database (ex: EXAMPLE_NAME1,EXMAPLE_NAME2)
 
+  **If Don't Have multipule Mysql-Server to backup then you can comment or remove the second line or if you ar useing two or more than that mysql runing then write them one by one like this and done forgot use a coma at the
+     End of each Deatils
+     
+- Now Add The Host Name (By default mysql runs on localhost if your mysql is running on another host (ip) then provide the host address)
+- Now add The User Name (It's suggested to create a user who have read privilege on your database or you can use root user but it's not suggested). Be sure That User details have privilege on that data base
+- Now add the User Password and Database Name and the Port( If you are not useing dcoker to run mysql then the default port for your mysql will be 3306) 
+** Sorry to say that if you  wanna whole database backup of a mysql-server for that if have to write down the whole details for each database this limitaion will fix soon 
+
+# Setup TelegramBot
+
+- Now we need to create a Telegram bot ( you can use [BOTFAHER](https://t.me/BotFather) and collect your BOT API Token)
+  
       ** I hope You Can create A Bot very easily if not you can watch any youtube tutorial for that
 
 - Next We Need A Chat id to send message to that id ( You Can Use [RAWBOT](https://t.me/raw_data_bot) and collect your chat id )
+
+  **once you message in this id the bot will reply you with your chat id
+  
 - After Geting Chat-id and BOT API key fill the data in python file
 
 ```bash
 
-  TELEGRAM_BOT_API_KEY="" # Telegram BOT API KEY
-  TELEGRAM_CHAT_ID="" # Telegram Chat I
+TELEGRAM_BOT_API_KEY="" # Telegram BOT API KEY
+TELEGRAM_CHAT_ID=0000 # Telegram Chat ID # telegram chat id will be a integer so dont use singel or double quotes
 
 ```
 
 After That now we are ready to check the script and then we schedule the task for us
-To check it just run the scipt in your vps server like this
+To check it just run the scipt in your vps server like this ( I hop you didn't deactivated your virtualenv)
 
 ```bash
-python3 backupMysql.py
+python3 BackupDatabase.py
 ```
  ** If you dont get any error while running script then you are ready to go to the next step to schedule it and if you get any error you can knock me in issues section
+- Now Deactivate The Virtualenv and Move to the next part with this following command
+
+  ```bash
+ deactivate
+  ```
    
 **Now Let's [schedule](../schedule.md) the Script for Daily Backup
