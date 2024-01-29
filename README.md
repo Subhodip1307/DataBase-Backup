@@ -21,6 +21,11 @@ This script currently supports the following database systems:
 <h1>Getting Started</h1>
 
   ** Before Getting Start User Should have python3 installed in Your system 
+  - Install Python Will Follwing comannds
+    ```bash
+    sudo apt install python
+    sudo apt install python3-pip
+    ```
 
 - [SQLITE](sqlite_backup/DBSQLITE.md)
 - [MYSQL/MYSQL-SERVER](mysql_backup/MYSQL.md)
