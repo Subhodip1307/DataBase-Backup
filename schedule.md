@@ -33,7 +33,6 @@ crontab -e
 ```bash
 sytax: */5 * * * * /path to your/<env name>/bin/python3 BackupDatabase.py /<location for a log files>/<file name>.log 2>&1
 example: */5 * * * * /root/Backupenv/bin/python3 BackupDatabase.py /root/mysqlbackupcode.log 2>&1
-
 ```
 - Now save The changes ( ctrl +s ) and exit (ctrl+x) and you will see the code wll send backup in each 5 mins ( it was just testing purpose)
 - If you get backup after few mintes then its working fine or if get an error the copy code form the path to BackupDatabase.py (ex: /root/Backupenv/bin/python3 BackupDatabase.py)
@@ -42,8 +41,14 @@ example: */5 * * * * /root/Backupenv/bin/python3 BackupDatabase.py /root/mysqlba
   syntax : cat /<location for a log files>/<file name>.log
   example: cat /root/mysqlbackupcode.log
   ```
-- Now If Every This went well you didn't have any problem now its set correct time for backup
-- Open The crontab editor again and change the */5 * * * * with 0 18 * * *
+- Now If Every Thing went well you didn't have any problem now its set correct time for backup
+- Open The crontab editor again and change the "*/5 * * * *" with "0 18 * * *"
+- Now is Should Look like this 
+
+```bash
+sytax: 0 18 * * * /path to your/<env name>/bin/python3 BackupDatabase.py /<location for a log files>/<file name>.log 2>&1
+example: 0 18 * * * /root/Backupenv/bin/python3 BackupDatabase.py /root/mysqlbackupcode.log 2>&1
+```
 
 Let understand What is written here in 3 parts
 
