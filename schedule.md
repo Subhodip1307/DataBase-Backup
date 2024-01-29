@@ -20,12 +20,31 @@ crontab -e
  ```bash
     sudo apt install cron
  ```
+** if you are running the command for the First time you will able to see something like this
+<center>
+ 
+ ![photo_2024-01-30_06-29-02](https://github.com/Subhodip1307/DataBase-Backup/assets/111901004/89e66097-b247-4166-a9df-806a141b3fb9)
 
-- After runing the first command (if you are running this first time it will ask to choose a text editor , choose any of your favorite) a page will open in your screen  , scroll down and and write this code
+</center>
+ Its Just asking you to choose any text editor , you can chose any one of them ( I would like to suggest you to chose nano editor for that just presss 1 and the enter) 
+
+- After runing the first command a page will open in your screen  , scroll down and and write this code
 
 ```bash
-0 18 * * *  python3 /root/backupdbSQLite.py  /root/script2.log 2>&1
+sytax: */5 * * * * /path to your/<env name>/bin/python3 BackupDatabase.py /<location for a log files>/<file name>.log 2>&1
+example: */5 * * * * /root/Backupenv/bin/python3 BackupDatabase.py /root/mysqlbackupcode.log 2>&1
+
 ```
+- Now save The changes ( ctrl +s ) and exit (ctrl+x) and you will see the code wll send backup in each 5 mins ( it was just testing purpose)
+- If you get backup after few mintes then its working fine or if get an error the copy code form the path to BackupDatabase.py (ex: /root/Backupenv/bin/python3 BackupDatabase.py)
+  and paste it in your VPS terminal and press enter will able to know the problem or you can check the log with the following command
+  ```bash
+  syntax : cat /<location for a log files>/<file name>.log
+  example: cat /root/mysqlbackupcode.log
+  ```
+- Now If Every This went well you didn't have any problem now its set correct time for backup
+- Open The crontab editor again and change the */5 * * * * with 0 18 * * *
+
 Let understand What is written here in 3 parts
 
 - In first part '0 18 * * *' there i have written this. This part of code mean run the scipt at 18th hour of a day and run it every day
