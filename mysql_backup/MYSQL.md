@@ -1,9 +1,42 @@
 # Data-Base-Back-up (MySql Guide)
  **before start I am considering that mysql in installed and running in your system.
+ 
  ** As we will work with mysql database so then move the 'mysql_backup' folder or just the 'backupMysql.py' to your server of vps
+
+# Features
+before starting Let look at the Features and know why you should Use this
+- Able to Take Backup of multipule Mysql runing in diffent container (docker images)
+- Completely Free and no need to care about stroage (As it's use Telegram to backup)
+- Get Daily Backup in your Telegram Chat
+- Easy To Setup
+- Poltable (will run in any OS) as it's Made with python 
+- Easy to Schedule Time For Backup   
+ 
 <h1>Getting Started</h1>
 
-- Open 'mysql_backup' folder (not required you just copied the python file)
+- Open 'mysql_backup' folder and copy it to your server (or  you can just copied the python file and requirements.txt)
+- Donwload Virtualenv in your system (if you Already Have you can skip this step)
+
+  ```bash
+  pip install virtualenv
+        or
+  pip3 install virtualenv
+        or
+  sudo apt-get install python3-virtualenv
+  ```
+  
+- Create a Virtualenv in python ( in my case i will name it as backupenv)
+
+```bash
+ syntax: python3 -m venv <env name>
+ example: python3 -m venv backupenv
+```
+- Activate The Virtualenv
+
+```bash
+syntax: source/<env name>/bin/acticate
+example: source/backupenv/bin/acticate
+```
 
 - Download Python Dependencies with the help of requirements.txt file.
 
