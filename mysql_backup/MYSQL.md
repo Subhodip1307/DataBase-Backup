@@ -52,6 +52,7 @@ example: source/backupenv/bin/acticate
    ```
    
 - In This Step You will have to provide your Database details, Here is a Example That how you should mention your Database Details
+  ** First Look at the example then I will explain all one bye one.
 
 ```bash
 Database_list={
@@ -59,9 +60,16 @@ Database_list={
     "EXMAPLE_NAME2":{"HOST":"localhost","USER":"root","PASSWORD":"root1234","DATABASE":"gitlab","PORT":3307}
 }
 ```
-Now Let's understand What to Do with it with few step
+ ** If you Have Backup Two Databases to backup just provide the Same details two times with different Key name (ex: in my example is 'EXAMPLE_NAME1' and the port should be the same).
 
-- At The begining I am giving the name of zipfiles in which I want to get backup of the database (ex: EXAMPLE_NAME1,EXMAPLE_NAME2)
+ ** If You are running a Docker Container in Your System and the port is exposed to the Host machine. For That Case, the host will be the localhost and enter the other credentials like password, user, and password port according to your docker container.
+
+ ** If You Are Using Docker Container and the ports are not exposed to the Host, then You need To follow This [documentation]()  
+
+
+Now Let's understand What to Do with it with a few step
+
+- At The beginning I am giving the name of zip files in which I want to get a backup of the database (ex: EXAMPLE_NAME1,EXMAPLE_NAME2)
 
   **If Don't Have multipule Mysql-Server to backup then you can comment or remove the second line or if you ar useing two or more than that mysql runing then write them one by one like this and done forgot use a coma at the
      End of each Deatils
