@@ -1,0 +1,15 @@
+services:
+  backup:
+    build: .
+    command: python3 /backup/BackupDatabase.py
+    volumes:
+        - .:/backup
+    networks:
+      - qrjgh_default
+      - jghcrm_default
+
+networks:
+  n1:
+    external: true
+  n2:
+    external: true
