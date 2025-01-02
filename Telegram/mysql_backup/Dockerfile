@@ -6,6 +6,6 @@ COPY requ.txt /backup/
 
 RUN pip install --upgrade pip
 
-RUN pip install -r requ.txt
+RUN pip install -r requirements.txt
 
 COPY BackupDatabase.py /backup/

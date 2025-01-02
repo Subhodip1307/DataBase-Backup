@@ -36,12 +36,7 @@ dbname="/path/to/your/db.sqlite3"
 ```
 ** Give any name as you like or you can simpliy change the word 'Backup' with anyother word you want
 
-  - Now we need to create a Telegram bot ( you can use [BOTFAHER](https://t.me/BotFather) and collect your BOT API Token
-
-      ** I hope You Can create A Bot very easily if not you can watch any youtube tutorial for that
-
-- Next We Need A Chat id to send message to that id ( You Can Use [RAWBOT](https://t.me/raw_data_bot) and collect your chat id )
-- After Geting Chat-id and BOT API key fill the data in python file
+- Now fill to variable with proper values.
 
 ```bash
 

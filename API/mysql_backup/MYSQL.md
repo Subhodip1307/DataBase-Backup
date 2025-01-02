@@ -71,12 +71,12 @@ Now Let's understand What to Do with it with a few step
 
 - At The beginning I am giving the name of zip files in which I want to get a backup of the database (ex: EXAMPLE_NAME1,EXMAPLE_NAME2)
 
-  **If Don't Have multipule Mysql-Server to backup then you can comment or remove the second line or if you ar useing two or more than that mysql runing then write them one by one like this and done forgot use a coma at the
+  **If Don't Have multipule Mysql-Server to backup then you can comment or remove the second line or if you ar using two or more than that mysql runing then write them one by one like this and done forgot use a coma at the
      End of each Deatils
      
 - Now Add The Host Name (By default mysql runs on localhost if your mysql is running on another host (ip) then provide the host address)
 - Now add The User Name (It's suggested to create a user who have read privilege on your database or you can use root user but it's not suggested). Be sure That User details have privilege on that data base
-- Now add the User Password and Database Name and the Port( If you are not useing dcoker to run mysql then the default port for your mysql will be 3306)
+- Now add the User Password and Database Name and the Port( If you are not using dcoker to run mysql then the default port for your mysql will be 3306)
   
 ** Sorry to say that if you  wanna whole database backup of a mysql-server for that if have to write down the whole details for each database this limitaion will fix soon 
 

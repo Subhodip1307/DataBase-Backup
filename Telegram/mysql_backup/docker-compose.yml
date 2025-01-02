@@ -5,8 +5,8 @@ services:
     volumes:
         - .:/backup
     networks:
-      - qrjgh_default
-      - jghcrm_default
+      - n1
+      - n2
 
 networks:
   n1:

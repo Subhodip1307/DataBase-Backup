@@ -24,12 +24,21 @@ This script currently supports the following database systems:
   
 <h1>Getting Started</h1>
 
-  ** Before Getting Start User Should have python3 installed in Your system 
-  - Install Python Will Follwing comannds
-    ```bash
-    sudo apt install python
-    sudo apt install python3-pip
-    ```
+- Set up Telegram bot
+- To create a Telegram bot ( you can use [BOTFAHER](https://t.me/BotFather) and collect your BOT API Token)
+  
+      ** I hope You Can create A Bot very easily if not you can watch any youtube tutorial for that
+
+- Next We Need A Chat id to send message to that id ( You Can Use [RAWBOT](https://t.me/raw_data_bot) and collect your chat id )
+
+  **once you message in this id the bot will reply you with your chat id
+
+- Docker installed and set-up in your system
+            
+            or,
+
+- Install Python to your system (If you wanna run the code directly in host machine)
+
 
 - [SQLITE](sqlite_backup/DBSQLITE.md)
 - [MYSQL/MYSQL-SERVER](mysql_backup/MYSQL.md)
