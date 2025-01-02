@@ -15,8 +15,8 @@ This script currently supports the following database systems:
 
 ## Methods
 Currently there is two methods :-
-- [Telegram Bot](API/README.md)
-- [Web API](Telegram/README.md)
+- [Telegram Bot](Telegram/README.md)
+- [Web API](API/README.md)
   
 # Future Improvements
 - Add more Databases.
