@@ -28,12 +28,23 @@ crontab -e
 </center>
  Its Just asking you to choose any text editor , you can chose any one of them ( I would like to suggest you to chose nano editor for that just presss 1 and the enter) 
 
-- After runing the first command a page will open in your screen  , scroll down and and write this code
+- After runing the first command a page will open in your screen  , scroll down and and write this code.
+
+  <b><u>If you are runing code directly in the host machine</u></b> :-
+  
 
 ```bash
 sytax: */5 * * * * /path to your/<env name>/bin/python3 BackupDatabase.py /<location for a log files>/<file name>.log 2>&1
 example: */5 * * * * /root/Backupenv/bin/python3 BackupDatabase.py /root/mysqlbackupcode.log 2>&1
 ```
+
+<b><u>If you are runing code From Docker</u></b> :-
+
+```bash
+sytax: */5 * * * * cd /path to your/<code location>/; docker-compose restart /<location for a log files>/<file name>.log 2>&1
+example: */5 * * * * cd /root/BackupDatabase; docker-compose restart /root/mysqlbackupcode.log 2>&1
+```
+
 - Now save The changes ( ctrl +s ) and exit (ctrl+x) and you will see the code wll send backup in each 5 mins ( it was just testing purpose)
 - If you get backup after few mintes then its working fine or if get an error the copy code form the path to BackupDatabase.py (ex: /root/Backupenv/bin/python3 BackupDatabase.py)
   and paste it in your VPS terminal and press enter will able to know the problem or you can check the log with the following command
