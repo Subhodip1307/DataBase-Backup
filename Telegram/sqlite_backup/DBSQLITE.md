@@ -1,13 +1,9 @@
 # Data-Base-Back-up (SQLITE Guide)
- **As we will work with SQLITE so I will you to suggest you to move only the 'sqlite_backup' folder or the python script to your VPS server
+ **As we will work with SQLITE so I will you to suggest you to move only the 'sqlite_backup' folder or the python script to your VPS server,
+ this code doesn't have any docker file , but if you want to dockerize it, you can.
 <h1>Getting Started</h1>
 
 - Open 'sqlite_backup' folder
-- Download Python Dependencies with the help of requirements.txt file.
-
-  ```bash
-    pip3 install -r requirements.txt
-  ```
 - Next open the code python code file in any text editor.
 
   ***In my case I will use nano editor and as I have opned 'sqlite_backup' folder so my python file name will be 'backupdbSQLite'
@@ -54,6 +50,12 @@ dbname="/path/to/your/db.sqlite3"
 
 ```
 
+- Download Python Dependencies with the help of requirements.txt file.
+
+```bash
+    pip3 install -r requirements.txt
+```
+  
 After That now we are ready to check the script and then we schedule the task for us
 To check it just run the scipt in your vps server like this
 
@@ -62,4 +64,4 @@ python3 backupdbSQLite.py
 ```
  ** If you dont get any error while running script then you are ready to go to the next step to schedule it and if you get any error you can knock me in issues section
    
-**Now Let's [schedule](../schedule.md) the Script for Daily Backup
+**Now Let's [schedule](../../schedule.md) the Script for Daily Backup
