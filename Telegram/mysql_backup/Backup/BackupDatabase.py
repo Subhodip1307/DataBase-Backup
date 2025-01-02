@@ -21,38 +21,38 @@ def send_message(chat_id, filename):
     bot.send_document(chat_id, document=open(f"{filename}.zip",'rb'))
 # send_message(TELEGRAM_CHAT_ID, '')
 
- for items in Database_list:
-     tablenames=[]
-     zipile=zipfile.ZipFile(f"{items}.zip",'w')
-     connection = mysql.connector.connect(
-       host=Database_list[items]["HOST"],
-       user=Database_list[items]["USER"],
-       password=Database_list[items]["PASSWORD"],
-       database=Database_list[items]["DATABASE"],
-       port=Database_list[items]["PORT"]
-     )
-     cursur=connection.cursor()
-     cursur.execute("SHOW TABLES;")
-     tablenames=[i[0] for i in cursur.fetchall()]
-     for tablename in tablenames:
-         query=f"SELECT * FROM {tablename} ;"
-         cursur.execute(query)
-         headers=[header[0] for header in cursur.description]
-         output=cursur.fetchall()
-         csv_file=io.StringIO()
-         csv_writer=csv.writer(csv_file)
-         csv_writer.writerow(headers)
-         for i in output:
-             csv_writer.writerow(i)
-         csv_file.seek(0)
-         zipile.writestr(f"{tablename}.csv",csv_file.read())
-         csv_file.close()
-     connection.commit()
-     connection.close()
-     zipile.close()
-     print("The backup for {} is done".format(items))
-     send_message(TELEGRAM_CHAT_ID,items)
-     print("Deleting the zip")
-     os.remove(f"{items}.zip")
+# for items in Database_list:
+#     tablenames=[]
+#     zipile=zipfile.ZipFile(f"{items}.zip",'w')
+#     connection = mysql.connector.connect(
+#       host=Database_list[items]["HOST"],
+#       user=Database_list[items]["USER"],
+#       password=Database_list[items]["PASSWORD"],
+#       database=Database_list[items]["DATABASE"],
+#       port=Database_list[items]["PORT"]
+#     )
+#     cursur=connection.cursor()
+#     cursur.execute("SHOW TABLES;")
+#     tablenames=[i[0] for i in cursur.fetchall()]
+#     for tablename in tablenames:
+#         query=f"SELECT * FROM {tablename} ;"
+#         cursur.execute(query)
+#         headers=[header[0] for header in cursur.description]
+#         output=cursur.fetchall()
+#         csv_file=io.StringIO()
+#         csv_writer=csv.writer(csv_file)
+#         csv_writer.writerow(headers)
+#         for i in output:
+#             csv_writer.writerow(i)
+#         csv_file.seek(0)
+#         zipile.writestr(f"{tablename}.csv",csv_file.read())
+#         csv_file.close()
+#     connection.commit()
+#     connection.close()
+#     zipile.close()
+#     print("The backup for {} is done".format(items))
+#     send_message(TELEGRAM_CHAT_ID,items)
+#     print("Deleting the zip")
+#     os.remove(f"{items}.zip")
 
 
