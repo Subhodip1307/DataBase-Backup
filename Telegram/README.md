@@ -18,6 +18,10 @@ This script currently supports the following database systems:
 - **MYSQL/MYSQL-SERVER**: MySQL is a relational database management system (RDBMS) that uses Structured Query Language (SQL) to store, manage, and retrieve data
 - Comming more soon.....
 
+## Limitations
+- Only 50 M.B. of data can be send at a time (hence suitable for only samll projects).
+- No Error Handeling
+  
 <h1>Getting Started</h1>
 
   ** Before Getting Start User Should have python3 installed in Your system 
